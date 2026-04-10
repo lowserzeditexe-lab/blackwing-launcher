@@ -1,0 +1,17 @@
+{
+  "id": "ranked",
+  "displayName": "Ranked",
+  "minecraftVersion": "1.8.9",
+  "memoryMb": 2048,
+  "jvmArgs": [
+    "-XX:+UseG1GC",
+    "-XX:+UseStringDeduplication",
+    "-XX:MaxGCPauseMillis=40"
+  ],
+  "goals": [
+    "high-fps",
+    "low-input-latency",
+    "minimal-ui"
+  ],
+  "recommendedRenderDistance": 6
+}

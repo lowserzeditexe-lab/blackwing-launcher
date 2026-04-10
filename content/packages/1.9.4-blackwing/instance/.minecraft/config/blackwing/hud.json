@@ -1,0 +1,34 @@
+{
+  "theme": "amoled-black-white",
+  "scale": 0.92,
+  "widgets": [
+    {
+      "id": "toggle-sprint",
+      "enabled": true,
+      "anchor": "top-left",
+      "x": 12,
+      "y": 12
+    },
+    {
+      "id": "armor-status",
+      "enabled": true,
+      "anchor": "top-left",
+      "x": 12,
+      "y": 38
+    },
+    {
+      "id": "cooldown-bar",
+      "enabled": true,
+      "anchor": "bottom-center",
+      "x": 0,
+      "y": -52
+    },
+    {
+      "id": "minimal-target-hud",
+      "enabled": true,
+      "anchor": "top-center",
+      "x": 0,
+      "y": 12
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "arena",
+  "displayName": "Arena",
+  "minecraftVersion": "1.9.4",
+  "memoryMb": 2048,
+  "jvmArgs": [
+    "-XX:+UseG1GC",
+    "-XX:+UseStringDeduplication",
+    "-XX:MaxGCPauseMillis=50"
+  ],
+  "goals": [
+    "balanced-fps",
+    "clean-combat-ui",
+    "arena-play"
+  ],
+  "recommendedRenderDistance": 7
+}

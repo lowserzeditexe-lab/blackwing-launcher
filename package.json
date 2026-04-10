@@ -1,0 +1,15 @@
+{
+  "name": "blackwing-client-suite",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Monorepo for the Blackwing minimalist Minecraft launcher, website, backend and legacy core module.",
+  "workspaces": [
+    "apps/launcher",
+    "services/manifest-api"
+  ],
+  "scripts": {
+    "dev:api": "node services/manifest-api/src/server.js",
+    "dev:launcher": "npm --workspace apps/launcher run dev",
+    "start:api": "node services/manifest-api/src/server.js"
+  }
+}

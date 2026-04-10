@@ -1,0 +1,28 @@
+plugins {
+    id 'java-library'
+}
+
+group = 'com.blackwing'
+version = '0.1.0'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+repositories {
+    mavenCentral()
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+jar {
+    manifest {
+        attributes(
+            'Implementation-Title': 'Blackwing Core Legacy',
+            'Implementation-Version': project.version
+        )
+    }
+}

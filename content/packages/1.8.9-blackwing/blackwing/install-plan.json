@@ -1,0 +1,33 @@
+{
+  "editionId": "1.8.9-blackwing",
+  "minecraftVersion": "1.8.9",
+  "recommendedOptiFineBuild": "OptiFine_1.8.9_HD_U_M6",
+  "steps": [
+    {
+      "id": "verify-optifine",
+      "action": "validate-user-runtime-input",
+      "expects": "OptiFine_1.8.9_HD_U_*.jar"
+    },
+    {
+      "id": "overlay-instance",
+      "action": "merge-directory",
+      "source": "instance/.minecraft",
+      "target": ".minecraft"
+    },
+    {
+      "id": "copy-runtime",
+      "action": "copy-user-optifine-jar",
+      "target": "runtime/optifine"
+    },
+    {
+      "id": "activate-profile",
+      "action": "select-profile",
+      "profileId": "ranked"
+    }
+  ],
+  "postInstallHints": [
+    "Leave shaders disabled for maximum FPS.",
+    "Keep render distance at 6 to 8 chunks on low-end machines.",
+    "Prefer fullscreen off if desktop capture or overlays add stutter."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "installs": 2,
+  "preparedLaunches": 0,
+  "authSuccess": 0,
+  "lastEvents": [
+    {
+      "type": "install",
+      "payload": {
+        "versionId": "1.8.9-blackwing"
+      },
+      "at": "2026-04-10T15:48:10.582Z"
+    },
+    {
+      "type": "install",
+      "payload": {
+        "versionId": "1.8.9-blackwing"
+      },
+      "at": "2026-04-10T12:26:20.352Z"
+    }
+  ]
+}

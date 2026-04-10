@@ -1,0 +1,20 @@
+{
+  "modules": [
+    {
+      "id": "toggle-sprint",
+      "enabled": true
+    },
+    {
+      "id": "armor-status",
+      "enabled": true
+    },
+    {
+      "id": "cooldown-bar",
+      "enabled": true
+    },
+    {
+      "id": "minimal-target-hud",
+      "enabled": true
+    }
+  ]
+}

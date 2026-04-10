@@ -1,0 +1,30 @@
+{
+  "id": "fps-legacy",
+  "displayName": "Legacy FPS",
+  "minecraftVersion": "1.7.10",
+  "video": {
+    "graphics": "fast",
+    "renderDistanceChunks": 6,
+    "smoothLighting": 0,
+    "particles": "minimal",
+    "clouds": "off",
+    "entityShadows": false,
+    "vsync": false,
+    "mipmapLevels": 0
+  },
+  "optifine": {
+    "smoothFps": true,
+    "smoothWorld": true,
+    "dynamicLights": "off",
+    "weather": false,
+    "sky": false,
+    "stars": false,
+    "animatedTextures": false
+  },
+  "hud": {
+    "minimal": true,
+    "armorStatus": true,
+    "toggleSprint": true,
+    "scoreboard": true
+  }
+}

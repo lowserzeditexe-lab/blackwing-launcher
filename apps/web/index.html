@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blackwing Client</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark"></span>
+          <div>
+            <strong id="brand-name">Blackwing Client</strong>
+            <p id="brand-tagline"></p>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="#home" data-i18n="nav.home"></a>
+          <a href="#features" data-i18n="nav.features"></a>
+          <a href="#versions" data-i18n="nav.versions"></a>
+          <a href="#download" data-i18n="nav.download"></a>
+        </nav>
+        <button class="lang-switch" id="lang-switch">EN</button>
+      </header>
+
+      <main>
+        <section class="hero" id="home">
+          <div class="hero-copy">
+            <p class="eyebrow">AMOLED MINIMAL STACK</p>
+            <h1 data-i18n="hero.title"></h1>
+            <p class="hero-text" data-i18n="hero.subtitle"></p>
+            <div class="hero-actions">
+              <a class="button primary" href="#download" data-i18n="hero.primary"></a>
+              <a class="button secondary" href="#versions" data-i18n="hero.secondary"></a>
+            </div>
+          </div>
+          <div class="hero-panel">
+            <div class="hero-stat">
+              <span>FPS</span>
+              <strong>MAX</strong>
+            </div>
+            <div class="hero-stat">
+              <span>UI</span>
+              <strong>B/W</strong>
+            </div>
+            <div class="hero-stat">
+              <span>SYNC</span>
+              <strong>JSON</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="feature-grid" id="features">
+          <article class="card">
+            <h2 data-i18n="feature.fps.title"></h2>
+            <p data-i18n="feature.fps.body"></p>
+          </article>
+          <article class="card">
+            <h2 data-i18n="feature.ui.title"></h2>
+            <p data-i18n="feature.ui.body"></p>
+          </article>
+          <article class="card">
+            <h2 data-i18n="feature.updates.title"></h2>
+            <p data-i18n="feature.updates.body"></p>
+          </article>
+        </section>
+
+        <section class="versions-section" id="versions">
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="nav.versions"></p>
+            <h2>Legacy-ready manifests</h2>
+          </div>
+          <div class="version-list" id="version-list"></div>
+        </section>
+
+        <section class="download-section" id="download">
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="nav.download"></p>
+            <h2>Launcher desktop</h2>
+          </div>
+          <div class="download-grid" id="download-grid"></div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p data-i18n="footer.legal"></p>
+      </footer>
+    </div>
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

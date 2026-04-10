@@ -1,0 +1,52 @@
+{
+  "id": "1.7.10-blackwing",
+  "displayName": "Blackwing 1.7.10 Legacy PvP",
+  "summary": "Edition legacy legere pour machines modestes avec priorite a la fluidite et au PvP oldschool.",
+  "minecraftVersion": "1.7.10",
+  "runtime": "Vanilla + OptiFine",
+  "javaVersion": 8,
+  "recommendedProfile": "legacy",
+  "install": {
+    "mode": "requires-optifine-import",
+    "status": "curated",
+    "requirements": [
+      "minecraft-account",
+      "java-8",
+      "optifine-jar"
+    ]
+  },
+  "bootstrap": {
+    "strategy": "optifine-first-patch",
+    "requiresUserProvidedOptiFine": true,
+    "recommendedOptiFineBuild": "OptiFine_1.7.10_HD_U_E7",
+    "supportsForge": false,
+    "coreIntegration": "patched-runtime"
+  },
+  "artifact": {
+    "fileName": "1.7.10-blackwing.zip",
+    "url": "/downloads/1.7.10-blackwing.zip",
+    "sha256": "69CB18D54389E9F32E321EB2F6867D4B73EB5F30295E0F014CD0A09E09FAA660"
+  },
+  "settings": {
+    "preset": "default-black-amoled",
+    "disableParticles": true,
+    "disableAnimations": true,
+    "disableFog": true,
+    "disableInternalShaders": true,
+    "minimalHud": true,
+    "maxFpsMode": true
+  },
+  "modules": [
+    "toggle-sprint",
+    "armor-status",
+    "hit-color",
+    "minimal-scoreboard"
+  ],
+  "externalOptimizers": [
+    {
+      "name": "OptiFine",
+      "bundled": false,
+      "note": "Required as a user-provided optimization dependency."
+    }
+  ]
+}

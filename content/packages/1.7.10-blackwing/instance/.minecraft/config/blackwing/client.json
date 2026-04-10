@@ -1,0 +1,22 @@
+{
+  "editionId": "1.7.10-blackwing",
+  "displayName": "Blackwing 1.7.10 Legacy PvP",
+  "themeId": "amoled-black-white",
+  "language": "fr_FR",
+  "requiresOptiFine": true,
+  "recommendedOptiFineBuild": "OptiFine_1.7.10_HD_U_E7",
+  "ui": {
+    "minimalHud": true,
+    "showArmorStatus": true,
+    "showToggleSprint": true,
+    "showMinimalScoreboard": true,
+    "showHitColor": true
+  },
+  "performance": {
+    "targetFrameCap": 240,
+    "disableParticles": true,
+    "disableFog": true,
+    "disableInternalShaders": true,
+    "disableAnimatedTextures": true
+  }
+}

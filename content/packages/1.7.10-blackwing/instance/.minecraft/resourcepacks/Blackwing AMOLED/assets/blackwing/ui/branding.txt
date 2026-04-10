@@ -1,0 +1,4 @@
+BLACKWING CLIENT
+Edition: 1.7.10 Legacy PvP
+Theme: AMOLED Black & White
+Focus: stable FPS on modest hardware

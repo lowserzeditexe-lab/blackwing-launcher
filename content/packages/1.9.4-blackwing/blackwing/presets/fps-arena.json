@@ -1,0 +1,33 @@
+{
+  "id": "fps-arena",
+  "displayName": "Arena FPS",
+  "minecraftVersion": "1.9.4",
+  "video": {
+    "graphics": "fast",
+    "renderDistanceChunks": 7,
+    "smoothLighting": 0,
+    "particles": "minimal",
+    "clouds": "off",
+    "entityShadows": false,
+    "vbo": true,
+    "vsync": false,
+    "mipmapLevels": 0
+  },
+  "optifine": {
+    "fastRender": true,
+    "smoothFps": true,
+    "smoothWorld": true,
+    "dynamicLights": "off",
+    "weather": false,
+    "sky": false,
+    "stars": false,
+    "animatedTextures": false
+  },
+  "hud": {
+    "minimal": true,
+    "armorStatus": true,
+    "toggleSprint": true,
+    "cooldownBar": true,
+    "targetHud": true
+  }
+}

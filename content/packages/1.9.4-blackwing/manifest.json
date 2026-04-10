@@ -1,0 +1,36 @@
+{
+  "packageId": "1.9.4-blackwing",
+  "displayName": "Blackwing 1.9.4 Arena",
+  "kind": "client-edition",
+  "formatVersion": 2,
+  "minecraftVersion": "1.9.4",
+  "runtime": "vanilla-optifine",
+  "uiTheme": "amoled-black-white",
+  "recommendedOptiFineBuild": "OptiFine_1.9.4_HD_U_I5",
+  "installStrategy": {
+    "mode": "merge-overlay",
+    "entryRoot": "instance/.minecraft",
+    "requiresOptiFineJar": true,
+    "targetProfile": "arena"
+  },
+  "contents": {
+    "configFiles": [
+      "instance/.minecraft/options.txt",
+      "instance/.minecraft/optionsof.txt",
+      "instance/.minecraft/optionsshaders.txt",
+      "instance/.minecraft/config/blackwing/client.json",
+      "instance/.minecraft/config/blackwing/hud.json",
+      "instance/.minecraft/config/blackwing/modules.json"
+    ],
+    "resourcePack": "Blackwing AMOLED",
+    "bundledProfiles": [
+      "arena"
+    ],
+    "moduleSet": [
+      "toggle-sprint",
+      "armor-status",
+      "cooldown-bar",
+      "minimal-target-hud"
+    ]
+  }
+}

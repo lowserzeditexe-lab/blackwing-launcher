@@ -1,0 +1,36 @@
+{
+  "packageId": "1.7.10-blackwing",
+  "displayName": "Blackwing 1.7.10 Legacy PvP",
+  "kind": "client-edition",
+  "formatVersion": 2,
+  "minecraftVersion": "1.7.10",
+  "runtime": "vanilla-optifine",
+  "uiTheme": "amoled-black-white",
+  "recommendedOptiFineBuild": "OptiFine_1.7.10_HD_U_E7",
+  "installStrategy": {
+    "mode": "merge-overlay",
+    "entryRoot": "instance/.minecraft",
+    "requiresOptiFineJar": true,
+    "targetProfile": "legacy"
+  },
+  "contents": {
+    "configFiles": [
+      "instance/.minecraft/options.txt",
+      "instance/.minecraft/optionsof.txt",
+      "instance/.minecraft/optionsshaders.txt",
+      "instance/.minecraft/config/blackwing/client.json",
+      "instance/.minecraft/config/blackwing/hud.json",
+      "instance/.minecraft/config/blackwing/modules.json"
+    ],
+    "resourcePack": "Blackwing AMOLED",
+    "bundledProfiles": [
+      "legacy"
+    ],
+    "moduleSet": [
+      "toggle-sprint",
+      "armor-status",
+      "hit-color",
+      "minimal-scoreboard"
+    ]
+  }
+}

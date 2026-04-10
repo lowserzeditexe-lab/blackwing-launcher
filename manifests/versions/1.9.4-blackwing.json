@@ -1,0 +1,52 @@
+{
+  "id": "1.9.4-blackwing",
+  "displayName": "Blackwing 1.9.4 Arena",
+  "summary": "Edition moderne equilibree pour 1.9.4 avec interface propre, cooldown visible et rendu depouille.",
+  "minecraftVersion": "1.9.4",
+  "runtime": "Vanilla + OptiFine",
+  "javaVersion": 8,
+  "recommendedProfile": "arena",
+  "install": {
+    "mode": "requires-optifine-import",
+    "status": "curated",
+    "requirements": [
+      "minecraft-account",
+      "java-8",
+      "optifine-jar"
+    ]
+  },
+  "bootstrap": {
+    "strategy": "optifine-first-patch",
+    "requiresUserProvidedOptiFine": true,
+    "recommendedOptiFineBuild": "OptiFine_1.9.4_HD_U_I5",
+    "supportsForge": false,
+    "coreIntegration": "patched-runtime"
+  },
+  "artifact": {
+    "fileName": "1.9.4-blackwing.zip",
+    "url": "/downloads/1.9.4-blackwing.zip",
+    "sha256": "33CA0626EB10B1F9382778D15714EF8C606181EB520A2BE08810D251F51A2D96"
+  },
+  "settings": {
+    "preset": "default-black-amoled",
+    "disableParticles": true,
+    "disableAnimations": true,
+    "disableFog": true,
+    "disableInternalShaders": true,
+    "minimalHud": true,
+    "maxFpsMode": true
+  },
+  "modules": [
+    "toggle-sprint",
+    "armor-status",
+    "cooldown-bar",
+    "minimal-target-hud"
+  ],
+  "externalOptimizers": [
+    {
+      "name": "OptiFine",
+      "bundled": false,
+      "note": "Required as a user-provided optimization dependency."
+    }
+  ]
+}

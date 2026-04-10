@@ -1,0 +1,58 @@
+{
+  "id": "1.8.9-blackwing",
+  "displayName": "Blackwing 1.8.9 Competitive",
+  "summary": "Edition PvP competitive orientee FPS eleves, HUD minimal et OptiFine.",
+  "minecraftVersion": "1.8.9",
+  "runtime": "Vanilla + OptiFine",
+  "javaVersion": 8,
+  "recommendedProfile": "ranked",
+  "install": {
+    "mode": "requires-optifine-import",
+    "status": "curated",
+    "requirements": [
+      "minecraft-account",
+      "java-8",
+      "optifine-jar"
+    ]
+  },
+  "bootstrap": {
+    "strategy": "optifine-first-patch",
+    "requiresUserProvidedOptiFine": true,
+    "recommendedOptiFineBuild": "OptiFine_1.8.9_HD_U_M6",
+    "supportsForge": false,
+    "coreIntegration": "patched-runtime"
+  },
+  "artifact": {
+    "fileName": "1.8.9-blackwing.zip",
+    "url": "/downloads/1.8.9-blackwing.zip",
+    "sha256": "5098CC609499981E302732EC5D57FAF2C242F5AE17D74B5C84C0D2A3C3C98BEE"
+  },
+  "settings": {
+    "preset": "default-black-amoled",
+    "disableParticles": true,
+    "disableAnimations": true,
+    "disableFog": true,
+    "disableInternalShaders": true,
+    "minimalHud": true,
+    "maxFpsMode": true
+  },
+  "modules": [
+    "toggle-sprint",
+    "armor-status",
+    "potion-counter",
+    "minimal-crosshair",
+    "clean-keystrokes"
+  ],
+  "externalOptimizers": [
+    {
+      "name": "OptiFine",
+      "bundled": false,
+      "note": "Required as a user-provided optimization dependency because redistribution is restricted."
+    },
+    {
+      "name": "FastCraft",
+      "bundled": false,
+      "note": "Keep external because redistribution terms must be checked for your deployment."
+    }
+  ]
+}

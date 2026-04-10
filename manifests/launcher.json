@@ -1,0 +1,25 @@
+{
+  "name": "Blackwing Launcher",
+  "launcherVersion": "0.1.0",
+  "theme": "amoled-black-white",
+  "defaultLocale": "fr",
+  "supportedLocales": [
+    "fr",
+    "en"
+  ],
+  "channels": [
+    "stable"
+  ],
+  "latestChannel": "stable",
+  "websiteUrl": "http://localhost:8787",
+  "downloads": {
+    "windows": {
+      "file": "BlackwingLauncher-Setup.exe",
+      "signed": false
+    },
+    "macos": {
+      "file": "BlackwingLauncher.dmg",
+      "signed": false
+    }
+  }
+}

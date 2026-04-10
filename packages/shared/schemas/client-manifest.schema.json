@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Blackwing version manifest",
+  "type": "object",
+  "required": [
+    "id",
+    "minecraftVersion",
+    "displayName",
+    "runtime",
+    "artifact",
+    "settings"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "minecraftVersion": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "runtime": {
+      "type": "string"
+    },
+    "artifact": {
+      "type": "object",
+      "required": [
+        "fileName",
+        "url"
+      ],
+      "properties": {
+        "fileName": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string"
+        }
+      }
+    },
+    "settings": {
+      "type": "object"
+    },
+    "install": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "requirements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "bootstrap": {
+      "type": "object",
+      "properties": {
+        "strategy": {
+          "type": "string"
+        },
+        "requiresUserProvidedOptiFine": {
+          "type": "boolean"
+        },
+        "supportsForge": {
+          "type": "boolean"
+        },
+        "coreIntegration": {
+          "type": "string"
+        }
+      }
+    },
+    "modules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "externalOptimizers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "bundled"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "bundled": {
+            "type": "boolean"
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

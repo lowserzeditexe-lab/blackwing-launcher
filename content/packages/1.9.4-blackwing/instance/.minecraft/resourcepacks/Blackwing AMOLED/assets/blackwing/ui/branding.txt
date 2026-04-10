@@ -1,0 +1,4 @@
+BLACKWING CLIENT
+Edition: 1.9.4 Arena
+Theme: AMOLED Black & White
+Focus: clean combat readability and balanced FPS

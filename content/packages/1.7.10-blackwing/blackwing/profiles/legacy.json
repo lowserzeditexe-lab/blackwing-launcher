@@ -1,0 +1,16 @@
+{
+  "id": "legacy",
+  "displayName": "Legacy",
+  "minecraftVersion": "1.7.10",
+  "memoryMb": 1536,
+  "jvmArgs": [
+    "-XX:+UseG1GC",
+    "-XX:MaxGCPauseMillis=50"
+  ],
+  "goals": [
+    "stable-fps",
+    "low-memory",
+    "oldschool-pvp"
+  ],
+  "recommendedRenderDistance": 6
+}

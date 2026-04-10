@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' https://unpkg.com; img-src 'self' data: https:;">
+  <title>Blackwing Launcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Barlow+Condensed:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════ LOGIN SCREEN ═══════════════════════ -->
+  <div id="screen-login">
+    <div class="login-art">
+      <div class="login-art-overlay"></div>
+      <div class="login-brand">
+        <div class="bw-logo">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 8h10l8 12-8 12H6l8-12L6 8Z" fill="white"/>
+            <path d="M22 8h12l-8 12 8 12H22l-8-12 8-12Z" fill="rgba(255,255,255,0.4)"/>
+          </svg>
+        </div>
+        <h1 class="login-title">BLACKWING</h1>
+        <p class="login-subtitle">Minecraft Performance Client</p>
+      </div>
+      <div class="login-features">
+        <div class="login-feat">
+          <div class="feat-badge">400+</div>
+          <div class="feat-info">
+            <strong>MAX FPS</strong>
+            <span>Best-in-class performance</span>
+          </div>
+        </div>
+        <div class="login-feat">
+          <div class="feat-badge">12</div>
+          <div class="feat-info">
+            <strong>MODS</strong>
+            <span>FPS, HUD, Sprint, Zoom &amp; more</span>
+          </div>
+        </div>
+        <div class="login-feat">
+          <div class="feat-badge">3</div>
+          <div class="feat-info">
+            <strong>VERSIONS</strong>
+            <span>1.7.10 · 1.8.9 · 1.9.4</span>
+          </div>
+        </div>
+        <div class="login-feat">
+          <div class="feat-badge">B/W</div>
+          <div class="feat-info">
+            <strong>AMOLED UI</strong>
+            <span>Minimal black &amp; white design</span>
+          </div>
+        </div>
+      </div>
+      <div class="login-footer-art">
+        <span class="version-tag">v1.0.0</span>
+        <span class="build-tag">STABLE</span>
+      </div>
+    </div>
+
+    <div class="login-panel">
+      <div class="login-panel-inner">
+        <div class="login-logo-row">
+          <svg viewBox="0 0 40 40" fill="none" width="32" height="32">
+            <path d="M6 8h10l8 12-8 12H6l8-12L6 8Z" fill="white"/>
+            <path d="M22 8h12l-8 12 8 12H22l-8-12 8-12Z" fill="rgba(255,255,255,0.35)"/>
+          </svg>
+          <span class="login-logo-text">BLACKWING</span>
+        </div>
+        <h2 class="login-heading">Welcome back</h2>
+        <p class="login-sub" id="login-status-text">Sign in to access all features</p>
+
+        <button class="btn-ms" id="btn-ms-login">
+          <svg viewBox="0 0 21 21" width="18" height="18" style="flex-shrink:0">
+            <rect x="1" y="1" width="9" height="9" fill="#f25022"/>
+            <rect x="11" y="1" width="9" height="9" fill="#00a4ef"/>
+            <rect x="1" y="11" width="9" height="9" fill="#7fba00"/>
+            <rect x="11" y="11" width="9" height="9" fill="#ffb900"/>
+          </svg>
+          Login with Microsoft Account
+        </button>
+
+        <div class="login-or"><span>or</span></div>
+
+        <button class="btn-guest" id="btn-guest-login">
+          Continue as Guest
+        </button>
+
+        <p class="login-note">
+          A Microsoft account is required to play multiplayer.<br>
+          Guest mode works offline only.
+        </p>
+      </div>
+      <div class="login-legal">© 2025 Blackwing — Not affiliated with Mojang AB or Microsoft</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ MAIN APP ═══════════════════════ -->
+  <div id="screen-app" class="hidden">
+
+    <!-- Custom Title Bar -->
+    <div class="titlebar" id="titlebar">
+      <div class="titlebar-left no-drag">
+        <svg viewBox="0 0 40 40" fill="none" width="22" height="22" style="flex-shrink:0">
+          <path d="M6 8h10l8 12-8 12H6l8-12L6 8Z" fill="white"/>
+          <path d="M22 8h12l-8 12 8 12H22l-8-12 8-12Z" fill="rgba(255,255,255,0.35)"/>
+        </svg>
+        <span class="titlebar-brand">BLACKWING</span>
+        <div class="titlebar-servers" id="titlebar-servers">
+          <button class="srv-btn" data-ip="mc.hypixel.net">Hypixel</button>
+          <button class="srv-btn" data-ip="play.cubecraft.net">CubeCraft</button>
+          <button class="srv-btn" data-ip="pvplegacy.net">PvP Legacy</button>
+        </div>
+      </div>
+      <div class="titlebar-drag"></div>
+      <div class="titlebar-right no-drag">
+        <div class="user-chip" id="user-chip">
+          <div class="user-avatar" id="user-avatar">G</div>
+          <span id="user-name">Guest</span>
+        </div>
+        <button class="wc-btn" id="btn-minimize" title="Minimize">&#x2212;</button>
+        <button class="wc-btn danger" id="btn-close" title="Close">&#x2715;</button>
+      </div>
+    </div>
+
+    <!-- App Body -->
+    <div class="app-body">
+
+      <!-- Sidebar -->
+      <nav class="sidebar">
+        <button class="nav-btn active" data-view="home" title="Home">
+          <i data-lucide="home"></i>
+        </button>
+        <button class="nav-btn" data-view="mods" title="Mods">
+          <i data-lucide="puzzle"></i>
+        </button>
+        <button class="nav-btn" data-view="versions" title="Versions">
+          <i data-lucide="layers"></i>
+        </button>
+        <button class="nav-btn" data-view="settings" title="Settings">
+          <i data-lucide="settings-2"></i>
+        </button>
+        <div class="sidebar-spacer"></div>
+        <button class="nav-btn lang-nav" id="btn-lang" title="Language">
+          <span id="lang-label">EN</span>
+        </button>
+      </nav>
+
+      <!-- Views -->
+      <main class="views-container">
+
+        <!-- ── HOME VIEW ── -->
+        <div id="view-home" class="view active">
+          <div class="hero">
+            <div class="hero-bg" id="hero-bg"></div>
+            <div class="hero-inner">
+              <div class="hero-left">
+                <div class="hero-edition" id="hero-edition">BLACKWING 1.8.9</div>
+                <div class="hero-launch-row">
+                  <button class="btn-launch" id="btn-launch">
+                    <span class="launch-title" id="launch-title">LAUNCH 1.8.9</span>
+                    <span class="launch-sub" id="launch-sub">Ready to launch</span>
+                  </button>
+                  <button class="btn-version-arrow" id="btn-version-arrow" title="Select version">
+                    <i data-lucide="chevron-down"></i>
+                  </button>
+                </div>
+                <!-- Version picker dropdown -->
+                <div class="version-dropdown hidden" id="version-dropdown"></div>
+              </div>
+              <div class="hero-stats">
+                <div class="hstat">
+                  <span class="hstat-label">FPS TARGET</span>
+                  <span class="hstat-val" id="stat-fps">MAX</span>
+                </div>
+                <div class="hstat">
+                  <span class="hstat-label">MODS ACTIVE</span>
+                  <span class="hstat-val" id="stat-mods">8</span>
+                </div>
+                <div class="hstat">
+                  <span class="hstat-label">MEMORY</span>
+                  <span class="hstat-val" id="stat-ram">2 GB</span>
+                </div>
+              </div>
+            </div>
+            <div class="install-bar hidden" id="install-bar">
+              <div class="install-bar-track">
+                <div class="install-bar-fill" id="install-bar-fill"></div>
+              </div>
+              <span class="install-bar-text" id="install-bar-text">Installing...</span>
+            </div>
+          </div>
+
+          <div class="home-body">
+            <div class="home-news">
+              <div class="section-head">LATEST NEWS</div>
+              <div class="news-grid" id="news-grid">
+                <article class="news-card" style="--i:0">
+                  <div class="news-img" style="background:linear-gradient(135deg,#111,#0a0a0a)">
+                    <span class="news-cat">UPDATE</span>
+                  </div>
+                  <div class="news-text">
+                    <strong>Blackwing 1.0 Released</strong>
+                    <span>AMOLED launcher · 3 versions · 12 mods</span>
+                  </div>
+                </article>
+                <article class="news-card" style="--i:1">
+                  <div class="news-img" style="background:linear-gradient(135deg,#0e0e0e,#080808)">
+                    <span class="news-cat">PERFORMANCE</span>
+                  </div>
+                  <div class="news-text">
+                    <strong>OptiFine HD U M6 Support</strong>
+                    <span>1.8.9 competitive + 1.7.10 legacy</span>
+                  </div>
+                </article>
+                <article class="news-card" style="--i:2">
+                  <div class="news-img" style="background:linear-gradient(135deg,#0c0c0c,#060606)">
+                    <span class="news-cat">MODS</span>
+                  </div>
+                  <div class="news-text">
+                    <strong>New: Keystrokes &amp; Coords</strong>
+                    <span>HUD modules now available</span>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="home-right">
+              <div class="section-head">STATUS</div>
+              <div class="status-panel">
+                <div class="status-row">
+                  <span class="sdot green"></span>
+                  <span class="slab">API Server</span>
+                  <span class="sval" id="s-api">Connecting...</span>
+                </div>
+                <div class="status-row">
+                  <span class="sdot" id="s-install-dot"></span>
+                  <span class="slab">Install</span>
+                  <span class="sval" id="s-install">Not installed</span>
+                </div>
+                <div class="status-row">
+                  <span class="sdot" id="s-optifine-dot"></span>
+                  <span class="slab">OptiFine</span>
+                  <span class="sval" id="s-optifine">Not attached</span>
+                </div>
+              </div>
+              <div class="home-actions">
+                <button class="btn-sec" id="btn-install">
+                  <i data-lucide="download"></i> Install / Update
+                </button>
+                <button class="btn-sec" id="btn-attach-optifine">
+                  <i data-lucide="paperclip"></i> Attach OptiFine
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── MODS VIEW ── -->
+        <div id="view-mods" class="view hidden">
+          <div class="mods-layout">
+            <div class="mods-sidebar">
+              <div class="section-head">PROFILES</div>
+              <div class="profile-list" id="profile-list"></div>
+              <div class="mods-side-actions">
+                <button class="btn-profile" id="btn-save-profile">
+                  <i data-lucide="plus"></i> Save Profile
+                </button>
+                <button class="btn-profile" id="btn-edit-hud">
+                  <i data-lucide="layout-dashboard"></i> Edit HUD
+                </button>
+              </div>
+            </div>
+
+            <div class="mods-main">
+              <div class="mods-top-bar">
+                <div class="filter-tabs" id="filter-tabs">
+                  <button class="ftab active" data-filter="all">ALL</button>
+                  <button class="ftab" data-filter="hud">HUD</button>
+                  <button class="ftab" data-filter="mechanic">MECHANIC</button>
+                  <button class="ftab" data-filter="performance">PERFORMANCE</button>
+                </div>
+                <div class="mod-search-wrap">
+                  <i data-lucide="search" class="search-icon"></i>
+                  <input class="mod-search" id="mod-search" placeholder="Search mods...">
+                </div>
+              </div>
+              <div class="mods-grid" id="mods-grid"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── VERSIONS VIEW ── -->
+        <div id="view-versions" class="view hidden">
+          <div class="view-header">
+            <h2 class="view-title">VERSION CATALOG</h2>
+            <p class="view-sub">Select a version to set as default. OptiFine required for all editions.</p>
+          </div>
+          <div class="versions-grid" id="versions-grid"></div>
+        </div>
+
+        <!-- ── SETTINGS VIEW ── -->
+        <div id="view-settings" class="view hidden">
+          <div class="settings-layout">
+            <div class="settings-col">
+              <div class="settings-card">
+                <div class="section-head">ACCOUNT</div>
+                <div class="account-display" id="account-display">
+                  <div class="account-avatar" id="account-avatar-big">G</div>
+                  <div>
+                    <div class="account-name" id="account-name-big">Guest</div>
+                    <div class="account-sub">Not signed in</div>
+                  </div>
+                </div>
+                <div class="settings-actions">
+                  <button class="btn-sec" id="btn-settings-login">
+                    <i data-lucide="log-in"></i> Change Account
+                  </button>
+                  <button class="btn-danger" id="btn-logout">
+                    <i data-lucide="log-out"></i> Logout
+                  </button>
+                </div>
+              </div>
+
+              <div class="settings-card">
+                <div class="section-head">LANGUAGE</div>
+                <div class="lang-toggle-row">
+                  <button class="lang-pill active" data-lang="en">English</button>
+                  <button class="lang-pill" data-lang="fr">Français</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="settings-col">
+              <div class="settings-card">
+                <div class="section-head">PERFORMANCE</div>
+                <div class="setting-row">
+                  <div class="setting-info">
+                    <span class="setting-label">Memory Allocation</span>
+                    <span class="setting-desc">RAM allocated to Minecraft</span>
+                  </div>
+                  <div class="slider-group">
+                    <input type="range" id="ram-slider" min="512" max="8192" step="512" value="2048" class="ram-slider">
+                    <span class="ram-val" id="ram-display">2048 MB</span>
+                  </div>
+                </div>
+                <div class="setting-row">
+                  <div class="setting-info">
+                    <span class="setting-label">Auto Update</span>
+                    <span class="setting-desc">Check for updates on launch</span>
+                  </div>
+                  <button class="toggle-pill on" id="btn-auto-update">ON</button>
+                </div>
+              </div>
+
+              <div class="settings-card">
+                <div class="section-head">SERVER</div>
+                <div class="setting-row">
+                  <div class="setting-info">
+                    <span class="setting-label">API Server URL</span>
+                    <span class="setting-desc">Manifest &amp; download server</span>
+                  </div>
+                  <input class="settings-input" id="api-url" value="http://localhost:8787">
+                </div>
+                <button class="btn-sec mt-sm" id="btn-save-api">
+                  <i data-lucide="save"></i> Save &amp; Reconnect
+                </button>
+              </div>
+            </div>
+
+            <div class="settings-col">
+              <div class="settings-card">
+                <div class="section-head">ABOUT</div>
+                <div class="about-info">
+                  <div class="about-logo">
+                    <svg viewBox="0 0 40 40" fill="none" width="48" height="48">
+                      <path d="M6 8h10l8 12-8 12H6l8-12L6 8Z" fill="white"/>
+                      <path d="M22 8h12l-8 12 8 12H22l-8-12 8-12Z" fill="rgba(255,255,255,0.35)"/>
+                    </svg>
+                  </div>
+                  <div class="about-name">Blackwing Launcher</div>
+                  <div class="about-ver">Version 1.0.0 · Stable</div>
+                  <div class="about-desc">
+                    Custom Minecraft performance client.<br>
+                    Inspired by Lunar Client. AMOLED design.
+                  </div>
+                  <div class="about-legal">Not affiliated with Mojang AB or Microsoft.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

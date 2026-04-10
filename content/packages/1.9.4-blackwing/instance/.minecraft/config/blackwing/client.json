@@ -1,0 +1,22 @@
+{
+  "editionId": "1.9.4-blackwing",
+  "displayName": "Blackwing 1.9.4 Arena",
+  "themeId": "amoled-black-white",
+  "language": "fr_FR",
+  "requiresOptiFine": true,
+  "recommendedOptiFineBuild": "OptiFine_1.9.4_HD_U_I5",
+  "ui": {
+    "minimalHud": true,
+    "showArmorStatus": true,
+    "showToggleSprint": true,
+    "showCooldownBar": true,
+    "showMinimalTargetHud": true
+  },
+  "performance": {
+    "targetFrameCap": 260,
+    "disableParticles": true,
+    "disableFog": true,
+    "disableInternalShaders": true,
+    "disableAnimatedTextures": true
+  }
+}

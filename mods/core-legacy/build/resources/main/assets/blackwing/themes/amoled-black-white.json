@@ -1,0 +1,9 @@
+{
+  "id": "amoled-black-white",
+  "background": "#050505",
+  "backgroundAlt": "#111111",
+  "text": "#f4f4f4",
+  "muted": "#999999",
+  "accent": "#ffffff",
+  "border": "#262626"
+}

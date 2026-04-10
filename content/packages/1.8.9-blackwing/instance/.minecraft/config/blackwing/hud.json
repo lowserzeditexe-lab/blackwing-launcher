@@ -1,0 +1,34 @@
+{
+  "theme": "amoled-black-white",
+  "scale": 0.92,
+  "widgets": [
+    {
+      "id": "toggle-sprint",
+      "enabled": true,
+      "anchor": "top-left",
+      "x": 12,
+      "y": 12
+    },
+    {
+      "id": "armor-status",
+      "enabled": true,
+      "anchor": "top-left",
+      "x": 12,
+      "y": 38
+    },
+    {
+      "id": "keystrokes",
+      "enabled": true,
+      "anchor": "bottom-left",
+      "x": 14,
+      "y": -92
+    },
+    {
+      "id": "potion-counter",
+      "enabled": true,
+      "anchor": "top-right",
+      "x": -12,
+      "y": 12
+    }
+  ]
+}

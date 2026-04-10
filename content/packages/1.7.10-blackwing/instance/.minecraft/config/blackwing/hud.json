@@ -1,0 +1,27 @@
+{
+  "theme": "amoled-black-white",
+  "scale": 0.9,
+  "widgets": [
+    {
+      "id": "toggle-sprint",
+      "enabled": true,
+      "anchor": "top-left",
+      "x": 12,
+      "y": 12
+    },
+    {
+      "id": "armor-status",
+      "enabled": true,
+      "anchor": "top-left",
+      "x": 12,
+      "y": 36
+    },
+    {
+      "id": "minimal-scoreboard",
+      "enabled": true,
+      "anchor": "top-right",
+      "x": -12,
+      "y": 12
+    }
+  ]
+}

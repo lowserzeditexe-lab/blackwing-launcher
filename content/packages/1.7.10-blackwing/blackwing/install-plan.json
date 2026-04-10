@@ -1,0 +1,33 @@
+{
+  "editionId": "1.7.10-blackwing",
+  "minecraftVersion": "1.7.10",
+  "recommendedOptiFineBuild": "OptiFine_1.7.10_HD_U_E7",
+  "steps": [
+    {
+      "id": "verify-optifine",
+      "action": "validate-user-runtime-input",
+      "expects": "OptiFine_1.7.10_HD_U_*.jar"
+    },
+    {
+      "id": "overlay-instance",
+      "action": "merge-directory",
+      "source": "instance/.minecraft",
+      "target": ".minecraft"
+    },
+    {
+      "id": "copy-runtime",
+      "action": "copy-user-optifine-jar",
+      "target": "runtime/optifine"
+    },
+    {
+      "id": "activate-profile",
+      "action": "select-profile",
+      "profileId": "legacy"
+    }
+  ],
+  "postInstallHints": [
+    "Keep the Blackwing AMOLED resource pack active.",
+    "Avoid high chunk distances on integrated GPUs.",
+    "Use fullscreen only if it improves frametime stability on the target PC."
+  ]
+}

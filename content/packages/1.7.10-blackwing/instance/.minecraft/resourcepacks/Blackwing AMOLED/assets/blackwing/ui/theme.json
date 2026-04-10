@@ -1,0 +1,11 @@
+{
+  "id": "amoled-black-white",
+  "surface": "#050505",
+  "surfaceAlt": "#0d0d0d",
+  "border": "#252525",
+  "text": "#f2f2f2",
+  "muted": "#969696",
+  "accent": "#ffffff",
+  "crosshairStyle": "legacy-dot",
+  "hudOpacity": 0.95
+}

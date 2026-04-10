@@ -1,0 +1,9 @@
+{
+  "channel": "stable",
+  "latest": "1.8.9-blackwing",
+  "versions": [
+    "1.8.9-blackwing",
+    "1.7.10-blackwing",
+    "1.9.4-blackwing"
+  ]
+}
